@@ -158,7 +158,7 @@ namespace VaughnVernon.Mockroservices
         {
             closed = true;
 
-            dispatcherThread.Abort();
+            // Not available in .net core :      dispatcherThread.Abort();
         }
 
         protected EventJournalPublisher(

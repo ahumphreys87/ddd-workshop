@@ -101,7 +101,7 @@ namespace VaughnVernon.Mockroservices
 
             closed = true;
 
-            dispatcherThread.Abort();
+            // Not supported on .net core :     dispatcherThread.Abort();
         }
 
         public string Name { get; private set; }
