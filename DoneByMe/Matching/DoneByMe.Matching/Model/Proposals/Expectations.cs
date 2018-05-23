@@ -13,6 +13,8 @@ namespace DoneByMe.Matching.Model.Proposals
 
 		public Summary Summary { get; private set; }
 
+		public Keywords Keywords { get; private set; }
+
 		public ISet<Step> Steps { get; private set; }
 
 		public long Price { get; private set; }
@@ -32,6 +34,11 @@ namespace DoneByMe.Matching.Model.Proposals
 		public Expectations WithAdjusted(long suggestedPrice)
 		{
 			return new Expectations(Summary, Description, CompletedBy, SuggestedCompletedBy, Steps, Price, suggestedPrice);
+		}
+
+		public Expectations WithKeywords(Keywords keywords)
+		{
+			return new Expectations(Summary, Description, CompletedBy, SuggestedCompletedBy, Steps, Price, SuggestedPrice, keywords);
 		}
 
 		public Expectations WithNew(Summary summary)
@@ -131,6 +138,18 @@ namespace DoneByMe.Matching.Model.Proposals
 			Steps = steps;
 			Price = price;
 			SuggestedPrice = suggestedPrice;
+		}
+
+		private Expectations(Summary summary, Description description, DateTime completedBy, DateTime suggestedCompletedBy, ISet<Step> steps, long price, long suggestedPrice, Keywords keywords)
+		{
+			Summary = summary;
+			Description = description;
+			CompletedBy = completedBy;
+			SuggestedCompletedBy = completedBy;
+			Steps = steps;
+			Price = price;
+			SuggestedPrice = suggestedPrice;
+			Keywords = keywords;
 		}
 	}
 }
