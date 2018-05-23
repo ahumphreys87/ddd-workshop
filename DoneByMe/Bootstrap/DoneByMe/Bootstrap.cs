@@ -1,6 +1,4 @@
 ﻿using System;
-using DoneByMe.Matching.Infra;
-using DoneByMe.Pricing.Infra;
 
 namespace DoneByMe.Bootstrap
 {

@@ -8,15 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Matching">
-      <HintPath>..\Matching\bin\Debug\netcoreapp2.0\Matching.dll</HintPath>
-    </Reference>
-    <Reference Include="mockroservices-dotnet">
-      <HintPath>..\..\ddd-workshop-core\bin\Debug\netcoreapp2.0\ddd-workshop-core.dll</HintPath>
-    </Reference>
-    <Reference Include="Pricing">
-      <HintPath>..\Pricing\bin\Debug\netcoreapp2.0\Pricing.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Matching\Matching.csproj" />
+    <ProjectReference Include="..\Pricing\Pricing.csproj" />
+    <ProjectReference Include="..\..\ddd-workshop-core\ddd-workshop-core.csproj" />
   </ItemGroup>
 
 </Project>
