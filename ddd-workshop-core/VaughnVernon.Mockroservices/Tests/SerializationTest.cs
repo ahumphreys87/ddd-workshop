@@ -19,7 +19,6 @@ namespace VaughnVernon.Mockroservices
 {
     public class SerializationTest
     {
-
         [Fact]
         public void TestSerializationDeserialization()
         {
